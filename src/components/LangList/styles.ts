@@ -7,4 +7,5 @@ export default styled.nav`
   align-items: center;
   padding: 40px;
   flex: 0 1 auto;
+  width: 100% !important;
 `;

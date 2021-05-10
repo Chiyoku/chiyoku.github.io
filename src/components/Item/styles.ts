@@ -20,6 +20,7 @@ export default styled.nav`
   @media (max-width: 950px) {
     margin: 40px;
     text-align: center;
+    width: calc(100% - 80px) !important;
     width: fit-content;
   }
 `;

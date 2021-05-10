@@ -9,6 +9,7 @@ export const Nav = styled.nav`
   padding: 40px;
   flex: 0 1 auto;
   width: 100%;
+  z-index: 10;
   @media (max-width: 768px) {
     background: #101010;
   }

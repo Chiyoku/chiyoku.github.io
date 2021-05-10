@@ -5,7 +5,7 @@ import Item from '../Item';
 const List: React.VFC = () => (
   <div>
     {items.map((item) => (
-      <Item name={item.name} desc={item.description} />
+      <Item key={item.name} name={item.name} desc={item.description} />
     ))}
   </div>
 );
