@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BsList, BsX } from 'react-icons/bs';
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
 import items from './items';
 
 import {
@@ -6,21 +9,33 @@ import {
   Logo,
   Ul,
   Li,
+  MenuIcon,
 } from './styles';
 
-const Header: React.VFC = () => (
-  <Nav>
-    <Logo>Chiyoku</Logo>
-    <Ul>
-      {items.map((item) => (
-        <Li key={item.name}>
-          <a href={item.url}>
-            {item.name}
-          </a>
-        </Li>
-      ))}
-    </Ul>
-  </Nav>
-);
+const Header: React.VFC = () => {
+  const [isOpen, setOpen] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 768 });
+  return (
+    <Nav>
+      <Logo>Chiyoku</Logo>
+      {(isOpen || !isMobile) && (
+        <Ul>
+          {items.map((item) => (
+            <Li key={item.name}>
+              <Link to={item.url}>
+                {item.name}
+              </Link>
+            </Li>
+          ))}
+        </Ul>
+      )}
+      {isMobile && (
+        <MenuIcon onClick={() => setOpen(!isOpen)}>
+          {!isOpen ? <BsList /> : <BsX />}
+        </MenuIcon>
+      )}
+    </Nav>
+  );
+};
 
 export default Header;
