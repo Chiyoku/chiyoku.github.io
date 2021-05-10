@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '@components/Navbar';
-import LangList from '@components/LangList';
+import Navbar from '../../components/Navbar';
+import LangList from '../../components/LangList';
 
 import {
   GlobalStyle,

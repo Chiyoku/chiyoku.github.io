@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
+  margin-top: 120px;
   display: grid;
   grid-template:
     '.     contents'
@@ -16,7 +17,7 @@ export const Container = styled.div`
   justify-items: center;
   align-items: center;
   flex: 1;
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 950px) {
     grid-template:
       'title'
       'contents';
@@ -37,7 +38,7 @@ export const About = styled.div`
     color: #737373;
   }
 
-  @media only screen and (max-width: 800px) {
+  @media (max-width: 950px) {
     text-align: center;
 
     h1 {
@@ -64,5 +65,4 @@ export const Button = styled.button`
   background: #ff5757;
   color: #fff;
   font-weight: bold;
-  box-shadow: 0px 2px 10px rgba(255, 87, 87, 0.1);
 `;
