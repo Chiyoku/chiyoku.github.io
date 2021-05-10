@@ -9,11 +9,27 @@ import {
   Contents,
   Wrapper,
   Button,
+  Bg,
 } from './styles';
 
 const Home: React.FC = () => (
   <>
     <GlobalStyle />
+    <Bg params={{
+      particles: {
+        line_linked: {
+          shadow: {
+            enable: true,
+            color: '#ff0000',
+            blur: 3,
+          },
+        },
+        move: {
+          speed: 1,
+        },
+      },
+    }}
+    />
     <Wrapper>
       <Navbar />
       <Container>

@@ -1,17 +1,15 @@
 export default [
   {
     name: 'Javascript',
-    description:
-      'Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met ',
+    description: 'I have 3 years of experience with Javascript using Node.js.',
   },
   {
-    name: 'Javascript',
-    description:
-      'Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met ',
+    name: 'Elixir',
+    description: 'Almost one year of experience using Elixir with OTP',
   },
   {
-    name: 'Javascript',
+    name: 'ReasonML',
     description:
-      'Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met Lorem ipsum dolor sit a met ',
+      'Since 2021 trying to improve my efficiency in ReasonML/OCaml.',
   },
 ];
