@@ -9,6 +9,6 @@ export default [
   },
   {
     name: 'Blog',
-    url: '/',
+    url: '/blog',
   },
 ];

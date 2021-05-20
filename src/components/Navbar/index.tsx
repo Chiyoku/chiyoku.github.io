@@ -12,16 +12,20 @@ import {
   MenuIcon,
 } from './styles';
 
-const Header: React.VFC = () => {
+interface HeaderProps {
+  whiteTheme: boolean;
+}
+
+const Header: React.VFC<HeaderProps> = ({ whiteTheme }: HeaderProps) => {
   const [isOpen, setOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
-    <Nav>
+    <Nav whiteTheme={whiteTheme}>
       <Logo>Chiyoku</Logo>
       {(isOpen || !isMobile) && (
-        <Ul>
+        <Ul whiteTheme={whiteTheme}>
           {items.map((item) => (
-            <Li key={item.name}>
+            <Li key={item.name} whiteTheme={whiteTheme}>
               <Link to={item.url}>
                 {item.name}
               </Link>
@@ -30,7 +34,7 @@ const Header: React.VFC = () => {
         </Ul>
       )}
       {isMobile && (
-        <MenuIcon onClick={() => setOpen(!isOpen)}>
+        <MenuIcon whiteTheme={whiteTheme} onClick={() => setOpen(!isOpen)}>
           {!isOpen ? <BsList /> : <BsX />}
         </MenuIcon>
       )}
