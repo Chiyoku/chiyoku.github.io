@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import LangList from '../../components/LangList';
+import Particles from '../../components/Particles';
 
 import {
   GlobalStyle,
@@ -9,29 +10,21 @@ import {
   Contents,
   Wrapper,
   Button,
-  Bg,
 } from './styles';
+
+const navBarTheme = {
+  background: 'transparent',
+  mobileBackground: '#111',
+  shadow: '20px rgba(0, 0, 0, 0.05)',
+  fontColor: '#bbb',
+};
 
 const Home: React.FC = () => (
   <>
     <GlobalStyle />
-    <Bg params={{
-      particles: {
-        line_linked: {
-          shadow: {
-            enable: true,
-            color: '#ff0000',
-            blur: 3,
-          },
-        },
-        move: {
-          speed: 1,
-        },
-      },
-    }}
-    />
+    <Particles />
     <Wrapper>
-      <Navbar />
+      <Navbar theme={navBarTheme} />
       <Container>
         <About>
           <h1>
