@@ -2,6 +2,7 @@ import React from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Blog from './pages/Blog';
 
 // Setar a margem e o padding pra 0
 // Por que as vezes tem muitos elementos com
@@ -29,6 +30,9 @@ function App() {
       <div className="App">
         <Wrapper />
         <Switch>
+          <Route path="/blog">
+            <Blog />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
