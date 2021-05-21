@@ -10,22 +10,19 @@ import {
   Ul,
   Li,
   MenuIcon,
+  NavBarProps,
 } from './styles';
 
-interface HeaderProps {
-  whiteTheme: boolean;
-}
-
-const Header: React.VFC<HeaderProps> = ({ whiteTheme }: HeaderProps) => {
+const Header: React.VFC<NavBarProps> = ({ theme }: NavBarProps) => {
   const [isOpen, setOpen] = useState(false);
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
-    <Nav whiteTheme={whiteTheme}>
+    <Nav theme={theme}>
       <Logo>Chiyoku</Logo>
       {(isOpen || !isMobile) && (
-        <Ul whiteTheme={whiteTheme}>
+        <Ul theme={theme}>
           {items.map((item) => (
-            <Li key={item.name} whiteTheme={whiteTheme}>
+            <Li key={item.name} theme={theme}>
               <Link to={item.url}>
                 {item.name}
               </Link>
@@ -34,7 +31,7 @@ const Header: React.VFC<HeaderProps> = ({ whiteTheme }: HeaderProps) => {
         </Ul>
       )}
       {isMobile && (
-        <MenuIcon whiteTheme={whiteTheme} onClick={() => setOpen(!isOpen)}>
+        <MenuIcon theme={theme} onClick={() => setOpen(!isOpen)}>
           {!isOpen ? <BsList /> : <BsX />}
         </MenuIcon>
       )}

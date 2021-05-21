@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
-interface NavBarProps {
-  whiteTheme: boolean;
+export interface NavBarProps {
+  theme: {
+    background: string;
+    mobileBackground: string;
+    shadow: string;
+    fontColor: string;
+  };
 }
 
 export const Nav = styled.nav<NavBarProps>`
@@ -14,11 +19,10 @@ export const Nav = styled.nav<NavBarProps>`
   flex: 0 1 auto;
   width: 100%;
   z-index: 10;
-  background: ${(props) => (props.whiteTheme ? '#FFF' : 'transparent')};
-  box-shadow: 0px 0px
-    ${(props) => (props.whiteTheme ? '20px rgba(0, 0, 0, 0.05)' : '0px')};
+  background: ${({ theme }) => theme.background};
+  box-shadow: ${({ theme }) => theme.shadow};
   @media (max-width: 768px) {
-    background: ${(props) => (props.whiteTheme ? '#FFF' : '#101010')};
+    background: ${({ theme }) => theme.mobileBackground};
   }
 `;
 
@@ -37,7 +41,7 @@ export const Ul = styled.ul<NavBarProps>`
     left: 0px;
     top: 80px;
     padding-bottom: 30px;
-    background: ${(props) => (props.whiteTheme ? '#FFF' : '#101010')};
+    background: ${({ theme }) => theme.mobileBackground};
   }
 `;
 
@@ -45,7 +49,7 @@ export const Li = styled.li<NavBarProps>`
   list-style-type: none;
 
   a {
-    color: ${(props) => (props.whiteTheme ? '#555' : '#bbb')};
+    color: ${({ theme }) => theme.fontColor} !important;
     margin: 0 25px;
     text-decoration: none;
   }
@@ -56,6 +60,6 @@ export const Li = styled.li<NavBarProps>`
 `;
 
 export const MenuIcon = styled.div<NavBarProps>`
-  color: ${(props) => (props.whiteTheme ? '#555' : '#bbb')};
+  color: ${({ theme }) => theme.fontColor};
   font-size: 30px;
 `;
