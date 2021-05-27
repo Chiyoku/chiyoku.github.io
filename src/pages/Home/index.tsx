@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../../components/Navbar';
 import LangList from '../../components/LangList';
-import Particles from '../../components/Particles';
 
 import {
   GlobalStyle,
@@ -22,7 +21,6 @@ const navBarTheme = {
 const Home: React.FC = () => (
   <>
     <GlobalStyle />
-    <Particles />
     <Wrapper>
       <Navbar theme={navBarTheme} />
       <Container>

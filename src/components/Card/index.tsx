@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import React from 'react';
 import CardInfo from '../../types';
 
@@ -30,7 +30,9 @@ const Card: React.VFC<CardInfo> = ({
       </CardBody>
       <CardFooter>
         <UrlButton>
-          READ MORE
+          <Link to={url}>
+            READ MORE
+          </Link>
         </UrlButton>
       </CardFooter>
     </CardFrame>

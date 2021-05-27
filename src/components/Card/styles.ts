@@ -52,6 +52,10 @@ export const UrlButton = styled.button`
   padding: 10px 20px 10px 20px;
   cursor: pointer;
   box-shadow: 0px 2px 10px rgba(255, 87, 87, 0.3);
+  a {
+    color: #fff !important;
+    text-decoration: none;
+  }
 `;
 
 export const CardFooter = styled.div`

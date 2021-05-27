@@ -1,26 +1,29 @@
 import React from 'react';
-import CardInfo from '../../types';
 import Card from '../Card';
 import Grid from './styles';
+import dataPosts from '../../posts/posts';
 
-interface GridParams {
-  cards: Array<CardInfo>
-}
-
-const PostGrid: React.VFC<GridParams> = ({ cards }: GridParams) => (
-  <Grid>
-    {
-      cards.map((cardinfo) => (
-        <Card
-          key={cardinfo.url}
-          title={cardinfo.title}
-          url={cardinfo.url}
-          description={cardinfo.description}
-          imageUrl={cardinfo.imageUrl}
-        />
-      ))
-    }
-  </Grid>
+const encodeURL = (url: string) => (
+  url.toLowerCase().replace(/[ ]/g, '-')
 );
+
+const PostGrid: React.VFC = () => {
+  const posts = dataPosts;
+  return (
+    <Grid>
+      {
+        posts.map((cardinfo, i) => (
+          <Card
+            key={cardinfo.url}
+            title={cardinfo.title}
+            url={`/post/${encodeURL(cardinfo.title)}/${i.toString()}`}
+            description={cardinfo.description}
+            imageUrl={cardinfo.imageUrl}
+          />
+        ))
+      }
+    </Grid>
+  );
+};
 
 export default PostGrid;

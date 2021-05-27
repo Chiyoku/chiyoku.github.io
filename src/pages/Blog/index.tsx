@@ -19,15 +19,7 @@ const Blog: React.FC = () => (
       }}
       />
       <Wrapper>
-        <PostGrid cards={new Array(7).fill(
-          {
-            title: 'Linguagens de programação',
-            description: ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla, faucibus sit amet leo eget, pulvinar blandit eli.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla, faucibus sit amet leo eget, pulvinar blandit eli.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla, faucibus sit amet leo eget, pulvinar blandit eli',
-            imageUrl: 'https://picsum.photos/500',
-            url: '/lero',
-          },
-        ).map((card, i) => ({ ...card, url: card.url + i }))}
-        />
+        <PostGrid />
       </Wrapper>
     </div>
   </>

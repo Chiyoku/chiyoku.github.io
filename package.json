@@ -14,6 +14,7 @@
     "@types/react-responsive": "^8.0.2",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.9",
+    "axios": "^0.21.1",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -56,5 +57,6 @@
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "gh-pages": "^3.1.0"
-  }
+  },
+  "proxy": "https://api.github.com/repos/Chiyoku/chiyoku.github.io/"
 }
