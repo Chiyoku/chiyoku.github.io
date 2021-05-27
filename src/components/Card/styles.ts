@@ -13,13 +13,13 @@ export const CardFrame = styled.div`
   overflow: hidden;
 
   @media (max-width: 768px) {
-    width: 100%;
+    width: 95%;
   }
 `;
 
 export const CardBg = styled.div<BgProps>`
   height: 190px;
-  width: 350px;
+  width: 100%;
   background-size: cover;
   background: url(${({ url }) => url});
   cursor: pointer;

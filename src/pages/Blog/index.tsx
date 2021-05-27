@@ -26,7 +26,7 @@ const Blog: React.FC = () => (
             imageUrl: 'https://picsum.photos/500',
             url: '/lero',
           },
-        )}
+        ).map((card, i) => ({ ...card, url: card.url + i }))}
         />
       </Wrapper>
     </div>

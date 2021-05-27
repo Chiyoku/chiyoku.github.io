@@ -12,6 +12,7 @@ const PostGrid: React.VFC<GridParams> = ({ cards }: GridParams) => (
     {
       cards.map((cardinfo) => (
         <Card
+          key={cardinfo.url}
           title={cardinfo.title}
           url={cardinfo.url}
           description={cardinfo.description}
