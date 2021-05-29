@@ -1,26 +1,14 @@
 import { graphql } from 'gatsby';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import React from 'react';
-import PostGrid from '../../components/PostGrid';
-import Navbar from '../../components/Navbar';
+import PostGrid from '../components/PostGrid';
+import Navbar from '../components/Navbar';
+import { GlobalStyle } from '../components/styles';
 
-import '../../components/layout.css';
-import { QueryRes } from '../../components/types';
+import { QueryRes } from '../components/types';
+import Seo from '../components/seo';
 
-/** TODO: Separate styles from this page */
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #181818;
-  }
-
-  * {
-    z-index: 1;
-  }
-`;
-
-const Wrapper = styled.div`
-  padding-top: 80px;
-`;
+const Wrapper = styled.div`padding-top: 80px;`;
 
 const Title = styled.div`
   text-align: center;
@@ -39,6 +27,7 @@ interface BlogProps {
 
 const Blog: React.FC<BlogProps> = ({ data }: BlogProps) => (
   <>
+    <Seo title="Blog" />
     <GlobalStyle />
     <div>
       <Navbar theme={{
@@ -68,6 +57,7 @@ query MyQuery {
           date
           title
         }
+        filename: slug
       }
     }
   }

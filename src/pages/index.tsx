@@ -4,8 +4,6 @@ import LangList from '../components/LangList';
 import Particles from '../components/Particles';
 import Seo from '../components/seo';
 
-import '../components/layout.css';
-
 import {
   GlobalStyle,
   Container,

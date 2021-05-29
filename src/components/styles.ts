@@ -2,12 +2,23 @@ import styled, { createGlobalStyle } from 'styled-components';
 import '@fontsource/poppins';
 
 export const GlobalStyle = createGlobalStyle`
-  body {
+  body,
+  html {
+    font-family: Poppins, sans-serrif;
+    min-height: 100vh;
     background: #181818;
   }
 
+  .App,
+  #root {
+    min-height: 100vh;
+  }
+
   * {
-    z-index: 1;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+      z-index: 1;
   }
 `;
 

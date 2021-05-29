@@ -5,6 +5,8 @@ export interface Md {
       date: Date;
       title: string;
     };
+
+    filename: string;
   };
 }
 
