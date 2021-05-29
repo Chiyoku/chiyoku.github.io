@@ -1,13 +1,23 @@
+import styled, { createGlobalStyle } from 'styled-components';
 import React from 'react';
 import PostGrid from '../../components/PostGrid';
 import Navbar from '../../components/Navbar';
 
 import '../../components/layout.css';
 
-import {
-  GlobalStyle,
-  Wrapper,
-} from './styles';
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: #EBEBEB;
+  }
+
+  * {
+    z-index: 1;
+  }
+`;
+
+const Wrapper = styled.div`
+  padding-top: 80px;
+`;
 
 const Blog: React.FC = () => (
   <>
