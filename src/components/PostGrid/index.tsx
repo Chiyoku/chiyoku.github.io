@@ -1,21 +1,16 @@
 import React from 'react';
 import Card from '../Card';
 import Grid from './styles';
+import { QueryRes } from '../types';
 
-const encodeURL = (url: string) => (
-  url.toLowerCase().replace(/[ ]/g, '-')
-);
-
-const PostGrid: React.VFC = () => (
+const PostGrid: React.VFC<QueryRes> = ({ mds }: QueryRes) => (
   <Grid>
     {
-      [].map((cardinfo, i) => (
+      mds.list.map(({ md: { fields } }) => (
         <Card
-          key={cardinfo.url}
-          title={cardinfo.title}
-          url={`/post/${encodeURL(cardinfo.title)}/${i.toString()}`}
-          description={cardinfo.description}
-          imageUrl={cardinfo.imageUrl}
+          key={fields.title}
+          title={fields.title}
+          description={fields.desc}
         />
       ))
     }

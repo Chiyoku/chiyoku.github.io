@@ -1,47 +1,29 @@
-import { Link, } from 'gatsby';
 import React from 'react';
+
+import {
+  CardFrame,
+  CardBody,
+} from './styles';
 
 interface CardInfo {
   title: string;
   description: string;
-  imageUrl: string;
-  url: string;
 }
-
-import {
-  CardFrame,
-  UrlButton,
-  CardBg,
-  CardBody,
-  CardFooter,
-} from './styles';
 
 const Card: React.VFC<CardInfo> = ({
   title,
-  url,
-  imageUrl,
   description,
-}: CardInfo) => {
-  return (
-    <CardFrame>
-      <CardBg url={imageUrl} />
-      <CardBody>
-        <h3>
-          {title}
-        </h3>
-        <p>
-          {description}
-        </p>
-      </CardBody>
-      <CardFooter>
-        <UrlButton>
-          <Link to={url}>
-            READ MORE
-          </Link>
-        </UrlButton>
-      </CardFooter>
-    </CardFrame>
-  );
-};
+}: CardInfo) => (
+  <CardFrame>
+    <CardBody>
+      <h3>
+        {title}
+      </h3>
+      <p>
+        {description}
+      </p>
+    </CardBody>
+  </CardFrame>
+);
 
 export default Card;
