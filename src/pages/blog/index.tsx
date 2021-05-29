@@ -5,6 +5,7 @@ import Navbar from '../../components/Navbar';
 
 import '../../components/layout.css';
 
+/** TODO: Separate styles from this page */
 const GlobalStyle = createGlobalStyle`
   body {
     background: #EBEBEB;
