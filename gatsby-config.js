@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Chiyoku',
     description:
-      'Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.',
+      'Just my(Chiyoku/Felipe G) website, portfolio and small blog with useless things that i learned yesterday',
     author: '@gatsbyjs',
+    icon: 'src/favicon.ico',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -11,6 +12,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-plugin-gatsby-cloud',
     'gatsby-plugin-styled-components',
+    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/posts/`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
