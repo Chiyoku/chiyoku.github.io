@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import "@fontsource/poppins"
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -9,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     z-index: 1;
   }
 `;
+
 
 export const Container = styled.div`
   margin-top: 120px;

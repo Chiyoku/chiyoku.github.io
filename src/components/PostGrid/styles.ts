@@ -6,7 +6,7 @@ export default styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 70px;
   grid-gap: 60px;
-  padding-top: 60px;
+  padding-top: 20px;
 
   @media (max-width: 768px) {
     padding: 10px;

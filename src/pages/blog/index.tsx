@@ -2,6 +2,8 @@ import React from 'react';
 import PostGrid from '../../components/PostGrid';
 import Navbar from '../../components/Navbar';
 
+import '../../components/layout.css';
+
 import {
   GlobalStyle,
   Wrapper,

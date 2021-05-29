@@ -1,6 +1,12 @@
-import { Link, useHistory } from 'react-router-dom';
+import { Link, } from 'gatsby';
 import React from 'react';
-import CardInfo from '../../types';
+
+interface CardInfo {
+  title: string;
+  description: string;
+  imageUrl: string;
+  url: string;
+}
 
 import {
   CardFrame,
@@ -16,10 +22,9 @@ const Card: React.VFC<CardInfo> = ({
   imageUrl,
   description,
 }: CardInfo) => {
-  const history = useHistory();
   return (
     <CardFrame>
-      <CardBg url={imageUrl} onClick={() => history.push(url)} />
+      <CardBg url={imageUrl} />
       <CardBody>
         <h3>
           {title}

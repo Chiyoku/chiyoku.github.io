@@ -1,6 +1,8 @@
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import LangList from '../../components/LangList';
+import Navbar from '../components/Navbar';
+import LangList from '../components/LangList';
+
+import '../components/layout.css';
 
 import {
   GlobalStyle,
@@ -10,6 +12,7 @@ import {
   Wrapper,
   Button,
 } from './styles';
+import Seo from '../components/seo';
 
 const navBarTheme = {
   background: 'transparent',
@@ -20,6 +23,7 @@ const navBarTheme = {
 
 const Home: React.FC = () => (
   <>
+    <Seo title="Home" />
     <GlobalStyle />
     <Wrapper>
       <Navbar theme={navBarTheme} />
