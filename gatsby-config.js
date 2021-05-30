@@ -4,7 +4,7 @@ module.exports = {
     description:
       'Just my(Chiyoku/Felipe G) website, portfolio and small blog with useless things that i learned yesterday',
     author: '@gatsbyjs',
-    icon: 'src/favicon.ico',
+    icon: 'favicon.ico',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
