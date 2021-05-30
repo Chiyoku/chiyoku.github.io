@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardFrame = styled.div`
   position: relative;
   width: 100%;
+  cursor: pointer;
   background: #1d1d1d;
   border-radius: 7px;
   overflow: hidden;

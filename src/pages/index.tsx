@@ -1,3 +1,4 @@
+import { navigate } from 'gatsby';
 import React from 'react';
 import Navbar from '../components/Navbar';
 import LangList from '../components/LangList';
@@ -34,7 +35,7 @@ const Home: React.FC = () => (
             Im a developer that loves interpreters,
             functional programming and actor model.
           </p>
-          <Button type="button">
+          <Button type="button" onClick={() => navigate('/blog')}>
             BLOG
           </Button>
         </About>

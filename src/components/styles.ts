@@ -75,6 +75,7 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   width: 170px;
+  cursor: pointer;
   padding: 10px;
   margin-top: 20px;
   border: none;

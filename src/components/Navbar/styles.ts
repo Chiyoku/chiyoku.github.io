@@ -28,6 +28,7 @@ export const Nav = styled.nav<NavBarProps>`
 
 export const Logo = styled.div`
   color: #ff5757;
+  cursor: pointer;
 `;
 
 export const Ul = styled.ul<NavBarProps>`
@@ -62,4 +63,5 @@ export const Li = styled.li<NavBarProps>`
 export const MenuIcon = styled.div<NavBarProps>`
   color: ${({ theme }) => theme.fontColor};
   font-size: 30px;
+  height: 30px;
 `;

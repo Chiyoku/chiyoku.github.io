@@ -15,7 +15,7 @@ export const MarkdownTheme = styled.div`
   text-justify: inter-word;
 
   p, li, ul, span, a {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.75em;
   }
 
@@ -39,6 +39,7 @@ export const MarkdownTheme = styled.div`
     padding: 20px;
     border-radius: 5px;
     margin: 20px 0px;
+    overflow: auto;
   }
 
   img {
