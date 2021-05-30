@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import LangList from '../components/LangList';
-import Particles from '../components/Particles';
 import Seo from '../components/seo';
 
 import {
@@ -24,7 +23,6 @@ const Home: React.FC = () => (
   <>
     <Seo title="Home" />
     <GlobalStyle />
-    <Particles />
     <Wrapper>
       <Navbar theme={navBarTheme} />
       <Container>

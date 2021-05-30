@@ -9,6 +9,7 @@ import { GlobalStyle } from '../components/styles';
 import Seo from '../components/seo';
 
 import { Wrapper, MarkdownTheme, Title } from './styles';
+import { WrapProvider } from './highlight';
 
 const theme = {
   background: '#131313',
@@ -24,9 +25,13 @@ const Post = ({ data }) => (
     <div>
       <Navbar theme={theme} />
       <Wrapper>
-        <MarkdownTheme />
         <Title>{data.mdx.frontmatter.title}</Title>
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
+        <MarkdownTheme>
+          <WrapProvider element={
+            <MDXRenderer>{data.mdx.body}</MDXRenderer>
+          }
+          />
+        </MarkdownTheme>
       </Wrapper>
     </div>
   </>

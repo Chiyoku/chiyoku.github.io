@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { BsList, BsX } from 'react-icons/bs';
 import { useMediaQuery } from 'react-responsive';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 import items from './items';
 
 import {
