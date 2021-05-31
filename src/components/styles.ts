@@ -56,7 +56,7 @@ export const About = styled.div`
 
   @media (max-width: 950px) {
     text-align: center;
-
+    padding: 0px;
     h1 {
       font-size: 3em;
     }
